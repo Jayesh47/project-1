@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.add-student {
+    border: 2px solid black;
+    width: 35%;
+    line-height: 4rem;
+    position: relative;
+    top: 6rem;
+    left: 2rem;
+    padding: 5px;
+}
+
+.add-student input {
+    width: 70%;
+    float: right;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.add-student label {
+    line-height: 3rem;
+    font-size: 18px;
+}
+
+.add-student>h2 {
+    background-color: chocolate;
+    text-align: center;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.add-student>button {
+    padding: 8px;
+    font-size: 15px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+}
+
+.display {
+    border: 2px solid black;
+    position: absolute;
+    float: right;
+    right: 2rem;
+    top: 6rem;
+    width: 56%;
+    text-align: center;
+    font-size: 18px;
+    overflow-y: scroll;
+    height: 70vh;
+}
+
+.display table #func a {
+    border: 2px solid black;
+    padding: 5px;
+    background-color: chocolate;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+}
+
+.display table #func a:hover {
+    background-color: brown;
+}
+
+.display table tr {
+    height: 8vh;
+}
+
+h1 {
+    background-color: chocolate;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+    padding: 8px;
+    margin-bottom: -3.2rem;
+}
+
+h5 {
+    position: relative;
+    top: 3.3rem;
+    text-align: center;
+    font-size: 20px;
+    background-color: rebeccapurple;
+    padding: 6px;
+    color: white;
+    letter-spacing: 4px;
+}

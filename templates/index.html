@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Todo List of Student Details</title>
+</head>
+
+<body>
+    <h1>Student Todo List</h1>
+    <form action="" method="post" class="add-student">
+        {% csrf_token %}
+        <h2>Add New Student</h2>
+        <label for="std_name">Student Name</label>
+        <input type="text" name="std_name" id="std_name" placeholder="Student name here."><br>
+        <label for="std_email">Student Email</label>
+        <input type="email" name="std_email" id="std_email" placeholder="Student email here"><br>
+        <label for="std_pass">Password</label>
+        <input type="password" name="std_pass" id="std_pass" placeholder="password here"><br>
+        <button type="submit">Add New</button>
+    </form>
+    <div class="display">
+        <table border="1" width="100%" align="center">
+            <thead>
+                <th width="8%">ID</th>
+                <th>Student Name</th>
+                <th>Student Email</th>
+                <th>Student password</th>
+                <th>&nbsp;</th>
+            </thead>
+            <tbody>
+                {% for data in AllData %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{data.student_name}}</td>
+                    <td>{{data.student_email}}</td>
+                    <td>{{data.student_password}}</td>
+                    <td id="func"><a href="delete/{{data.student_id}}">Delete</a>
+                        <a href="edit/{{data.student_id}}" id="edit">Edit</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>    
+        </table>
+    </div>
+</body>
+
+</html>

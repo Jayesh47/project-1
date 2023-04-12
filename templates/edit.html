@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Update your details</title>
+    <style>
+        #edit {
+            position: relative;
+            left: 20rem;
+            width: 60%;
+            background-color:aquamarine;
+        }
+    </style>
+</head>
+
+<body style="background-color: skyblue;">
+
+    <form action="{% url 'update' student_id %}" method="post" class="add-student" id="edit">
+        {% csrf_token %}
+        <h2>Update Student Details</h2>
+        <label for="std_name">Student Name</label>
+        <input type="text" name="std_name" id="std_name" value="{{student_name}}"><br>
+        <label for="std_email">Student Email</label>
+        <input type="email" name="std_email" id="std_email" value="{{student_email}}"><br>
+        <label for="std_pass">Password</label>
+        <input type="password" name="std_pass" id="std_pass" value="{{student_password}}"><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+
+</html>
